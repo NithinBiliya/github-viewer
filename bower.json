@@ -1,0 +1,25 @@
+{
+  "name": "github-viewer",
+  "homepage": "https://github.com/NithinBiliya/github-viewer",
+  "authors": [
+    "nithin.biliya@yahoo.in"
+  ],
+  "description": "Github viewer to search for a github user and browse through his repositories",
+  "main": "index.html",
+  "keywords": [
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.9",
+    "angular-route": "^1.6.9"
+  }
+}
