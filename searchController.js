@@ -1,7 +1,7 @@
 (function() {
   angular.module("githubViewer")
     .controller("searchController", ["$interval","$location","$log",function($interval,$location,$log) {
-      vm=this;
+      var vm=this;
       
       vm.username="angular";
       
@@ -15,14 +15,14 @@
       }
       
       vm.search=function(username) {
-        // TODO - add form validation to see mandatory fields
-        
-        if(intervalPromise!=null) {
-          $interval.cancel(intervalPromise);
-          vm.counter=null;
+        if(vm.searchUser.$valid) {
+          if(intervalPromise!=null) {
+            $interval.cancel(intervalPromise);
+            vm.counter=null;
+          }
+          $log.info("Searching with user - "+username);
+          $location.path("/user/"+username);
         }
-        $log.info("Searching with user - "+vm.username);
-        $location.path("/user/"+vm.username);
       }
       
       var intervalPromise=$interval(decrementCounter,1000,5);

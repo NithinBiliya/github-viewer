@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="githubViewer">
 
   <head>
+    <link rel="stylesheet" href="style.css">
+    
     <script src="lib/angular/angular.min.js"></script>
     <script src="lib/angular-route/angular-route.min.js"></script>
     <script src="githubViewerModule.js"></script>
@@ -11,7 +13,7 @@
     <script src="repoController.js"></script>
   </head>
 
-  <body ng-app="githubViewer">
+  <body ng-cloak>
     <h1>Github Viewer</h1>
     <div ng-view></div>
   </body>
