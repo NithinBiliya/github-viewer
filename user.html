@@ -1,0 +1,33 @@
+<div>
+  <div ng-show="vm.error">{{vm.error}}</div>
+  <div ng-show="vm.user">
+    <h2>{{vm.user.login}}</h2>
+    <div>
+      <img ng-src="{{vm.user.avatar_url}}" title="{{vm.user.login}}">
+    </div>
+    <div>
+      <div>{{vm.user.login}} user repositories</div>
+      <div>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Stars</th>
+              <th>Language</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="repo in vm.user.repos">
+              <td><a href="#!/repo/{{vm.user.login}}/{{repo.name}}">{{repo.name}}</a></td>
+              <td>{{repo.stargazers_count}}</td>
+              <td>{{repo.language}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div>
+    <a href="#/main">Go back to user search</a>
+  </div>
+</div>

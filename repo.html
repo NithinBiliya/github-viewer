@@ -1,0 +1,18 @@
+<div>
+  <div ng-show="vm.error">{{vm.error}}</div>
+  <div ng-show="vm.repo">
+    <h2>{{vm.repo.name}}</h2>
+    <h3>Open issues - {{vm.repo.open_issues}}</h3>
+    <div>
+      <h3> list of all contributors - </h3>
+      <ul>
+        <li ng-repeat="contributor in vm.repo.contributors">
+          <div>{{contributor.login}}</div>
+          <div>{{contributions}}</div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div><a href="#/main">Go back to user search</a></div>
+  <div><a href="#!/user/{{vm.username}}">Go back to user details</a></div>
+</div>
